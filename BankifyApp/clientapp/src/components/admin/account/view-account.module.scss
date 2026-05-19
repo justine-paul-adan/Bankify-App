@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: gray;
+}
+
+.searchBox {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+}
+
+.userCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.verticalDivider {
+  height: 50px;
+}
+
+.roleSection {
+  text-align: right;
+}
+
+.roleRow {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.emptyState {
+  color: gray;
+}

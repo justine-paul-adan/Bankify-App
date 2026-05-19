@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 6px;
+}
+
+/* spacing */
+.heading {
+  margin-top: 2rem;
+}
+
+.section {
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+/* layout helpers */
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gridGap {
+  gap: 1.5rem;
+}
+
+/* cards */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cardBodyTight {
+  margin-top: -2rem;
+}
+
+/* chart */
+.chartContainer {
+  width: 100%;
+  height: 250px;
+}
+
+/* recent activity */
+.recentActivityTitle {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

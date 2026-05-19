@@ -1,0 +1,36 @@
+.header {
+  background-color: white;
+  padding: 0 1.5rem;
+  height: 4rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+
+    span {
+      font-size: 1.25rem;
+      font-weight: 500;
+      background: linear-gradient(90deg, #2093d8, #edd124);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: .25rem;
+  }
+}
