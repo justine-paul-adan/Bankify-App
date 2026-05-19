@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bankify-webapi
+    env: docker
+    plan: free
+    repo: https://github.com/justine-paul-adan/Bankify-App
+    branch: testbranch
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: "ASPNETCORE_ENVIRONMENT"
+        value: "Production"
+      # Note: do NOT commit secrets. Set DB connection and JWT secrets in Render's dashboard.
+      - key: "PORT"
+        value: "10000"

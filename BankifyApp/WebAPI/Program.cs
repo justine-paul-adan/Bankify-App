@@ -11,6 +11,16 @@ using WebAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// When hosting on platforms like Render, the server's port is provided via
+// the PORT environment variable. Tell Kestrel to listen on 0.0.0.0 and that port
+// so the service is reachable from outside the container.
+var port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrEmpty(port))
+{
+    // UseUrls will configure the server URLs before building the app.
+    builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+}
+
 // Add services to the container.
 
 builder.Services.AddControllers();
