@@ -55,6 +55,31 @@ namespace WebAPI.Controllers
             });
         }
 
+        // 👑 ADMIN + TELLER
+        [Authorize(Roles = "Admin,Teller")]
+        [HttpGet("GetBankifyUserByUserRef/{userRef}")]
+        public async Task<IActionResult> GetByRef(string userRef)
+        {
+            var user = await _bankifyUserService.GetBankifyUserByUserRefAsync(userRef);
+            return Ok(new ResponseDto<BankifyUserDto>
+            {
+                IsSuccess = true,
+                Data = user
+            });
+        }
+
+        [Authorize]
+        [HttpPut("UpdateBankifyUser")]
+        public async Task<IActionResult> Update(UpdateBankifyUserDto dto)
+        {
+            var result = await _bankifyUserService.UpdateBankifyUserAsync(dto);
+            return Ok(new ResponseDto<BankifyUserDto>
+            {
+                IsSuccess = true,
+                Data = result
+            });
+        }
+
         [Authorize]
         [HttpDelete("DeleteBankifyUser/{userRef}")]
         public async Task<IActionResult> Delete(string userRef)
